@@ -2,18 +2,24 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> BiteShuffle</title>
+    <title>BiteShuffle</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
     <script src="assets/javascript/modal1.js"></script>
+    <script src="assets/javascript/modal2.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq6fnQw56h8E40TIlzsNFlIpa9Y1RSEuE&callback=initMap">
+    </script>
+    <script src="assets/javascript/map.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <div class="ui container">
-            <div class="ui segment">
-                <h1 class="ui center aligned huge  header"> BITE SHUFFLE </h1>
-            </div>
+    <div class="ui segment">
+        <h1 class="ui center aligned huge  header"> BITE SHUFFLE </h1>
+    </div>
 </div>
 <br>
 <div class="ui container">
@@ -32,8 +38,7 @@
             </div>
         </div>
         <div class="two wide column">
-            <button class="circular positive ui right floated button">LETS EAT!</button>
-
+            <button id="bite" class="circular positive ui right floated button">BITE!</button>
         </div>
     </div>
 
@@ -56,7 +61,8 @@
 
                 <div class="results"></div>
             </div>
-            <br <hr>
+            <br>
+            <hr>
             <h2 class="ui huge header"> PICK AS MANY AS YOU LIKE</h2>
             <div class="ui segment">
                 <div class="ui left aligned grid">
@@ -74,7 +80,7 @@
         </div>
     </div>
 </div>
-<div class="ui modal" id="restaurant-info">
+<div class="ui long modal" id="restaurant-info">
     <div class="ui container">
         <div class="eight wide column">
             <div class="ui segment">
@@ -144,13 +150,11 @@
     <br/>
     <div class="ui container">
         <div id="search-again" class="ui segment">
-            <button class="ui fluid button">Search Again</button>
+            <div class="actions">
+                <button class="ui fluid button">Search Again</button>
+            </div>
         </div>
     </div>
 </div>
-
-<div class="ui star rating" data-rating="3"></div>
-
-
 
 </html>
