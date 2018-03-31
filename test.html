@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/modal.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 <head>
     <meta charset="UTF-8">
@@ -10,27 +11,11 @@
 </head>
 <body>
 <div class="ui contianer">
-    <div class="ui modal">
-        <i class="close icon"></i>
-        <div class="header">
-            Modal Title
-        </div>
-        <div class="image content">
-            <div class="image">
-                An image can appear on left or an icon
-            </div>
-            <div class="description">
-                A description can appear on the right
-            </div>
-        </div>
-        <div class="actions">
-            <div class="ui button">Cancel</div>
-            <div class="ui button">OK</div>
-        </div>
-    </div>
+        <div id="map"></div>
 </div>
-<script>
-    $('.ui.modal').modal();
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq6fnQw56h8E40TIlzsNFlIpa9Y1RSEuE&callback=initMap">
 </script>
+<script src="assets/javascript/map.js"></script>
 </body>
 </html>

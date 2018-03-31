@@ -1,1 +1,52 @@
-<div id="map"></div>
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> BiteShuffle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="ui container">
+    <div class="eight wide column">
+        <div class="ui segment">
+            <h1 class="ui center aligned huge header"> BITE SHUFFLE </h1>
+        </div>
+    </div>
+</div>
+<br>
+<div class="ui container">
+    <div class="ui segment">
+        <h3 class="ui center aligned massive header">RESTAURANT NAME</h3>
+        <div id="map"></div>
+    </div>
+</div>
+<br/>
+<div class="ui container">
+    <div id="menu" class="ui segment">
+        <h4 class="ui center aligned header">menu</h4>
+    </div>
+</div>
+<br/>
+<div class="ui container">
+    <div id="delivery" class="ui segment">
+        <h4 class="ui center aligned header">delivery</h4>
+    </div>
+</div>
+<br/>
+<div class="ui container">
+    <div id="reviews" class="ui segment">
+        <h4 class="ui center aligned header">reviews</h4>
+    </div>
+</div>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq6fnQw56h8E40TIlzsNFlIpa9Y1RSEuE&callback=initMap">
+</script>
+<script src="assets/javascript/map.js"></script>
+</body>
+
+</html>
