@@ -5,8 +5,13 @@ $(document).ready(function () {
     $("#menu-info").hide();
 
     $("#menu").on("click", function(){
+        $("#restaurant-info").modal({
+            centered: false
+        });
         $("#menu-info").toggle();
+        $("#restaurant-info").parent().css("overflow-y", "scroll");
+
     })
 
-    $("#restaurant-info").parent().css("overflow-y", "scroll")
+
 })
