@@ -7,4 +7,6 @@ $(document).ready(function () {
     $("#menu").on("click", function(){
         $("#menu-info").toggle();
     })
+
+    $("#restaurant-info").parent().css("overflow-y", "scroll")
 })
