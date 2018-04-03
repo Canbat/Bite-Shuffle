@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15452a83-c9a1-4302-915a-4431986ab879" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/javascript/map.js" afterPath="$PROJECT_DIR$/assets/javascript/map.js" />
+      <change beforePath="$PROJECT_DIR$/assets/javascript/modal1.js" afterPath="$PROJECT_DIR$/assets/javascript/modal1.js" />
       <change beforePath="$PROJECT_DIR$/assets/javascript/modal2.js" afterPath="$PROJECT_DIR$/assets/javascript/modal2.js" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -17,14 +19,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="90" column="8" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
-              <folding>
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="420">
+              <caret line="57" column="89" lean-forward="true" selection-start-line="57" selection-start-column="89" selection-end-line="57" selection-end-column="89" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/javascript/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="459">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,8 +52,8 @@
       <file leaf-file-name="modal2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/javascript/modal2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,8 +62,8 @@
       <file leaf-file-name="modal1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/javascript/modal1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,12 +86,12 @@
       <list>
         <option value="$PROJECT_DIR$/assets/javascript/maps.js" />
         <option value="$PROJECT_DIR$/info.html" />
-        <option value="$PROJECT_DIR$/assets/javascript/map.js" />
         <option value="$PROJECT_DIR$/restaurants.html" />
-        <option value="$PROJECT_DIR$/assets/javascript/modal1.js" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/assets/javascript/modal2.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/javascript/modal2.js" />
+        <option value="$PROJECT_DIR$/assets/javascript/modal1.js" />
+        <option value="$PROJECT_DIR$/assets/javascript/map.js" />
       </list>
     </option>
   </component>
@@ -190,12 +190,12 @@
       <workItem from="1522499738046" duration="660000" />
       <workItem from="1522503755019" duration="5192000" />
       <workItem from="1522509721113" duration="6006000" />
-      <workItem from="1522610700152" duration="3681000" />
+      <workItem from="1522610700152" duration="10926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17762000" />
+    <option name="totallyTimeSpent" value="25007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -235,9 +235,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
-          <folding>
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -277,9 +275,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -329,10 +325,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/javascript/modal1.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="420">
+          <caret line="57" column="89" lean-forward="true" selection-start-line="57" selection-start-column="89" selection-end-line="57" selection-end-column="89" />
           <folding />
         </state>
       </provider>
@@ -345,29 +341,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/javascript/map.js">
+    <entry file="file://$PROJECT_DIR$/assets/javascript/modal1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/javascript/modal2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/javascript/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="90" column="8" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
-          <folding>
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
