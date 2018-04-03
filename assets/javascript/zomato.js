@@ -46,8 +46,10 @@ function displayRestaurantData(){
         
             // Storing the restaurant data(Restaurant Name, Cuisine info, User Rating, Price, Featured Image)
             var restaurant = data.restaurants[0].restaurant.name;
+                var restaurantName = $('#restaurant-name').text(restaurant);
             var cuisine = data.restaurants[0].restaurant.cuisines;
             var rating = data.restaurants[0].restaurant.user_rating.aggregate_rating;
+                var userRating = $('#restaurant-name').text(restaurant);
             var price = data.restaurants[0].restaurant.price_range;
             var photo = data.restaurants[0].restaurant.featured_image;
             console.log(restaurant);
