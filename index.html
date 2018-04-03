@@ -12,10 +12,11 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq6fnQw56h8E40TIlzsNFlIpa9Y1RSEuE&callback=initMap">
     </script>
     <script src="assets/javascript/map.js"></script>
+    <script src="assets/javascript/zomato.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
+    <!-- Make sure all of the IDs on elements match -->
 <div class="ui container">
     <div class="ui segment">
         <h1 class="ui center aligned huge  header"> BITE SHUFFLE </h1>
@@ -25,12 +26,12 @@
 <div class="ui container">
     <div class="ui three column middle aligned grid">
         <div class="two wide column">
-            <button class="circular negative ui left floated button">NOPE!</button>
+            <button id="nope" class="circular negative ui left floated button">NOPE!</button>
         </div>
         <div class="twelve wide column">
             <div class="ui segment">
-                <h3 class="ui center aligned massive header"> RESTAURANT NAME</h3>
-                <img class="ui fluid image" src="assets/images/PlaceHolder.jpg">
+                <h3 id="restaurant-name" class="ui center aligned massive header"> RESTAURANT NAME</h3>
+                <img id="restaurant-img" class="ui fluid image" src="assets/images/PlaceHolder.jpg">
                 <br>
                 <h2 class="ui small left floated header">Rating: <i class="star icon"></i></h2>
                 <h2 class="ui small right floated header"><i class="money icon"></i>:Price</h2>
@@ -181,7 +182,7 @@
     <br>
     <div class="ui center aligned container">
         <div class="actions">
-            <button class="circular negative ui button">RANDOM</button>
+            <button id="nope"class="circular negative ui button">RANDOM</button>
             <button id="search" class="ui approve button circular postive">SEARCH</button>
         </div>
     </div>
