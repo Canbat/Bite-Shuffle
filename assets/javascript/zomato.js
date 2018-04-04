@@ -29,6 +29,9 @@ var apiUrl = "https://developers.zomato.com/api/v2.1/search?";
     }
   });
 
+// Generating random restaurant number = R
+  var R = Math.floor(Math.random() * 20) -1;
+  console.log(R);
 //Creating an AJAX call to randomly generate the Restaurant Name & Restarant Image.
 
 function displayRestaurantData(){
@@ -45,17 +48,19 @@ function displayRestaurantData(){
         success: function(data){
         
             // Storing the restaurant data(Restaurant Name, Cuisine info, User Rating, Price, Featured Image)
-            var restaurant = data.restaurants[0].restaurant.name;
+            var restaurant = data.restaurants[R].restaurant.name;
                 var restaurantName = $('#restaurant-name').text(restaurant);
-            var cuisine = data.restaurants[0].restaurant.cuisines;
-            var rating = data.restaurants[0].restaurant.user_rating.aggregate_rating;
-                var userRating = $('#restaurant-name').text(restaurant);
-            var price = data.restaurants[0].restaurant.price_range;
-            var photo = data.restaurants[0].restaurant.featured_image;
+            var cuisine = data.restaurants[R].restaurant.cuisines;
+            var rating = data.restaurants[R].restaurant.user_rating.aggregate_rating;
+                var userRating = $('#zomato-rating').text("Bite-Rating: "+ rating);
+            var price = data.restaurants[R].restaurant.price_range;
+                var userRating = $('#price-scale').text(price + " out of 5" + " :" + "Price-Range " );
+            var photo = data.restaurants[R].restaurant.featured_image;
+                $('#restaurant-img').attr('src', photo);
             console.log(restaurant);
             console.log(cuisine);
-            console.log("Bite Rating " + rating);
-            console.log("Price " + price);
+            console.log("Bite-Rating " + rating);
+            console.log("Price-Range " + price);
             console.log(photo);
         },
         //if you use .then(function(response or data)) you would use .catch(function(xml,text,error)) instead of error.
