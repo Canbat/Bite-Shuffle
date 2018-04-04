@@ -73,6 +73,7 @@ function displayRestaurantData(){
 }  displayRestaurantData()
 
 //Randomize restaurant data by looping through api restaurant array to choose restaurant based on matching cuisine selections & zipcode.
+
 $(document).ready(function(){
     $('#nope').on("click", function(){
         R = Math.floor(Math.random() * 20) -1;     
@@ -81,6 +82,8 @@ $(document).ready(function(){
     })
     
 });
+
+
 
 
 // Create jquery logic for user onClick Nope! & Bite! commands
@@ -92,6 +95,7 @@ $(document).ready(function(){
     
 
     //User Rating display
+
 
 
     //Average Price display
