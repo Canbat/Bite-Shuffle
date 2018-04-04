@@ -12,7 +12,6 @@ $(document).ready(function () {
         lat = response.latitude;
         lng = response.longitude;
         initMap();
-        console.log(response.postal);
     })
 
 });
