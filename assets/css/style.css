@@ -1,5 +1,54 @@
+
+body {
+    /* background-image: url('../images/bungalow.jpg'); */
+    
+}
+
+#top-img {
+    height: 80px;
+}
+
 #map {
      height: 400px;
      width: 100%;
  }
+
+ #header {
+     align-self: center;
+     height: 100px;
+     
+ }
+
+#nope {
+    height: 100px;
+    width: 100px;
+    font-family:'Muli', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    
+    
+}
+
+#bite {
+    height: 100px;
+    width: 100px;
+    font-family:'Muli', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+#restaurant-name {
+    font-family:'Muli', sans-serif;
+}
+
+#zomato-rating {
+    font-family:'Muli', sans-serif;
+}
+
+#price-scale {
+    font-family:'Muli', sans-serif;
+}
+
+
 
