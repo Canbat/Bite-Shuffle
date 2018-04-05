@@ -4,6 +4,8 @@ $(document).ready(function () {
     ;
     $("#menu-info").hide();
 
+
+
     $("#menu").on("click", function(){
         $("#restaurant-info").modal({
             centered: false

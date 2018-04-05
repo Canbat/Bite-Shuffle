@@ -1,5 +1,3 @@
-var lat = -25.363;
-var lng = 131.044;
 
 
 $("#menu-info").hide();
@@ -22,6 +20,3 @@ function initMap() {
     });
 }
 
-$(document).ready(function(){
-
-})
