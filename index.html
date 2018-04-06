@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
     <script src="assets/javascript/modal1.js"></script>
     <script src="assets/javascript/modal2.js"></script>
+    <script src="assets/javascript/java.js"></script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq6fnQw56h8E40TIlzsNFlIpa9Y1RSEuE&callback=initMap">
     </script>
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Make sure all of the IDs on elements match -->
+<!-- Make sure all of the IDs on elements match -->
 <div class="ui container">
     <div class="ui segment">
         <!-- <h1 class="ui center aligned huge  header" style="font-family:'Muli', sans-serif;"> BITE SHUFFLE </h1> -->
@@ -69,112 +70,17 @@
             <h2 class="ui center aligned huge header"> PICK AS MANY AS YOU LIKE</h2>
             <div class="ui left aligned segment">
                 <div class="ui left aligned grid">
-                    <table id="restaurants" width="100%">
-                        <tr>
-                            <td><input type="checkbox" /> Ainu </td>
-                            <td><input type="checkbox" /> Albanian </td>
-                            <td><input type="checkbox" /> Andhra </td>
-                            <td><input type="checkbox" /> Arab </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> American </td>
-                            <td><input type="checkbox" /> Assyrian </td>
-                            <td><input type="checkbox" /> Awadhi </td>
-                            <td><input type="checkbox" /> Azerbaijani </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Balochi </td>
-                            <td><input type="checkbox" /> Belarusian </td>
-                            <td><input type="checkbox" /> Bengali </td>
-                            <td><input type="checkbox" /> Berber </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Buddhist </td>
-                            <td><input type="checkbox" /> Bulgarian </td>
-                            <td><input type="checkbox" /> Cajun </td>
-                            <td><input type="checkbox" /> Chechen </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Chinese  </td>
-                            <td><input type="checkbox" /> Circassian </td>
-                            <td><input type="checkbox" /> Estonian </td>
-                            <td><input type="checkbox" /> French </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Filipino </td>
-                            <td><input type="checkbox" /> Georgian </td>
-                            <td><input type="checkbox" /> Goan </td>
-                            <td><input type="checkbox" /> Greek </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Hyderabad </td>
-                            <td><input type="checkbox" /> Indian </td>
-                            <td><input type="checkbox" /> Indonesian </td>
-                            <td><input type="checkbox" /> Inuit </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Italian </td>
-                            <td><input type="checkbox" /> Japanese </td>
-                            <td><input type="checkbox" /> Jewish </td>
-                            <td><input type="checkbox" /> Karnataka </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Kazakh </td>
-                            <td><input type="checkbox" /> Kurdish </td>
-                            <td><input type="checkbox" /> Latvian </td>
-                            <td><input type="checkbox" /> Lithuanian </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Maharashtrian </td>
-                            <td><input type="checkbox" /> Mangalorean </td>
-                            <td><input type="checkbox" /> Malay </td>
-                            <td><input type="checkbox" /> Keralite </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Malaysian </td>
-                            <td><input type="checkbox" /> Mexican </td>
-                            <td><input type="checkbox" /> Mordovian </td>
-                            <td><input type="checkbox" /> Mughal </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Parsi </td>
-                            <td><input type="checkbox" /> Pashtun </td>
-                            <td><input type="checkbox" /> Polish </td>
-                            <td><input type="checkbox" /> Pakistani </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Peranakan </td>
-                            <td><input type="checkbox" /> Persian </td>
-                            <td><input type="checkbox" /> Portuguese </td>
-                            <td><input type="checkbox" /> Punjabi </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Rajasthani </td>
-                            <td><input type="checkbox" /> Romanian </td>
-                            <td><input type="checkbox" /> Russian </td>
-                            <td><input type="checkbox" /> Sami </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Serbian </td>
-                            <td><input type="checkbox" /> Sindhi </td>
-                            <td><input type="checkbox" /> Slovak </td>
-                            <td><input type="checkbox" /> Sami </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Slovenian </td>
-                            <td><input type="checkbox" /> Tatar </td>
-                            <td><input type="checkbox" /> Turkish </td>
-                            <td><input type="checkbox" /> Tamil </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /> Udupi </td>
-                            <td><input type="checkbox" /> Ukrainian </td>
-                            <td><input type="checkbox" /> Yamal </td>
-                            <td><input type="checkbox" /> Zanzibari </td>
-                        </tr>
+                    <form>
+                        <div id="data">
+                            <div class="multiselect">
+                                <div id="c_b">
+                                    <div id="checkboxes"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
 
-                    </table>
-                    <div class="checkBoxContainer"></div>
+                    <textarea id="t"></textarea>
 
                 </div>
             </div>
@@ -265,6 +171,7 @@
         </div>
     </div>
 </div>
-
+<script src="assets/javascript/java.js"></script>
+</body>
 
 </html>
