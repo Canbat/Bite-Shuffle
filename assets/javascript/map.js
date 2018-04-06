@@ -9,7 +9,7 @@ $("#menu").on("click", function () {
 
 
 function initMap() {
-    var uluru = {lat: lat, lng: lng};
+    var uluru = {lat: restaurantLat, lng: restaurantLng};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
         center: uluru
