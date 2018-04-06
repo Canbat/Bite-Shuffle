@@ -1,11 +1,27 @@
 
 body {
-    /* background-image: url('../images/bungalow.jpg'); */
+    /* background-image: url('../images/BiteImage2.jpg'); */
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
 
+#bite-display {
+    background-color: #ff8a50;
+    
+}
+
+#restaurant-name {
+    color: ivory;
+    font-weight: bold;
+}
+
+
+
 #top-img {
-    height: 80px;
+    margin-top: 3%;
+    height: 60px;
 }
 
 #map {
@@ -25,6 +41,7 @@ body {
     font-family:'Muli', sans-serif;
     font-size: 1.2em;
     text-align: center;
+    box-shadow: 5px 5px 18px red;
     
     
 }
@@ -35,19 +52,25 @@ body {
     font-family:'Muli', sans-serif;
     font-size: 1.2em;
     text-align: center;
+    box-shadow: 5px 5px 18px lightgreen;
 }
 
 
 #restaurant-name {
     font-family:'Muli', sans-serif;
+    font-size: 1.7em;
 }
 
 #zomato-rating {
     font-family:'Muli', sans-serif;
+    font-size: 1.3em;
+    color: ivory;
 }
 
 #price-scale {
     font-family:'Muli', sans-serif;
+    font-size: 1.3em;
+    color: ivory;
 }
 
 

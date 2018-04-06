@@ -80,15 +80,15 @@ function displayRestaurantData() {
             var cuisine = data.restaurants[R].restaurant.cuisines;
 
             var rating = data.restaurants[R].restaurant.user_rating.aggregate_rating;
-                var userRating = $('#zomato-rating').text("Bite-Rating: "+ rating);
+                var userRating = $('#zomato-rating').text("Bite-Rating: " + rating);
 
             var price = data.restaurants[R].restaurant.price_range;
-                var userRating = $('#price-scale').text(price + " out of 5" + " :" + "Price-Range " );
+                var userRating = $('#price-scale').text("Price-Range"+ ": " + price +" out of 5"     );
 
             var photo = data.restaurants[R].restaurant.featured_image;
                 
                 if (photo == ""){
-                    $('#restaurant-img').attr('src', assets/images/biteshuffle.png);
+                    $('#restaurant-img').attr('src', 'assets/images/biteshuffle1.png');
                 }
                 else {
                 $('#restaurant-img').attr('src', photo);
