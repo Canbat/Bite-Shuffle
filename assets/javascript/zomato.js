@@ -1,27 +1,8 @@
-
 var lat;
 var lng;
 var restaurantLat;
 var restaurantLng;
-$(document).ready(function () {
-    $('#landing-modal')
-        .modal('setting', 'closable', false)
-        .modal('show')
-
-    $.ajax({
-        url: "https://ipapi.co/json/",
-        method: "GET"
-    })
-        .then(function (response) {
-            $("#zipcode").val(response.postal);
-            lat = response.latitude;
-            lng = response.longitude;
-            initMap();
-        })
-
-});
-
-
+var menu;
 
 var userKey = "74947a847a6bedf2fed11165ada8f8b4";
 
@@ -32,7 +13,7 @@ var userKey = "74947a847a6bedf2fed11165ada8f8b4";
 
 //Global Zomato Search ---Use this one!!!
 
-var apiUrl = "https://developers.zomato.com/api/v2.1/search?";
+var apiUrl;
 
 //    $.ajax({
 //     url: apiUrl,
@@ -75,24 +56,30 @@ function displayRestaurantData() {
 
             // Storing the restaurant data(Restaurant Name, Cuisine info, User Rating, Price, Featured Image)
             var restaurant = data.restaurants[R].restaurant.name;
-                var restaurantName = $('#restaurant-name').text(restaurant);
+            var restaurantName = $('.restaurant-name').text(restaurant);
 
             var cuisine = data.restaurants[R].restaurant.cuisines;
 
             var rating = data.restaurants[R].restaurant.user_rating.aggregate_rating;
-                var userRating = $('#zomato-rating').text("Bite-Rating: "+ rating);
+            var userRating = $('#zomato-rating').text("Bite-Rating: " + rating);
 
             var price = data.restaurants[R].restaurant.price_range;
-                var userRating = $('#price-scale').text(price + " out of 5" + " :" + "Price-Range " );
+            var userRating = $('#price-scale').text(price + " out of 5" + " :" + "Price-Range ");
 
             var photo = data.restaurants[R].restaurant.featured_image;
-                
-                if (photo == ""){
-                    $('#restaurant-img').attr('src', assets/images/biteshuffle.png);
-                }
-                else {
+
+            if (photo == "") {
+                $('#restaurant-img').attr('src', "assets/images/biteshuffle.png");
+            }
+            else {
                 $('#restaurant-img').attr('src', photo);
-                }
+            }
+            restaurantLat = data.restaurants[R].restaurant.location.latitude;
+            restaurantLng = data.restaurants[R].restaurant.location.longitude;
+
+            menu = data.restaurants[R].restaurant.menu_url;
+            addMenuUrl();
+
 
             console.log(restaurant);
             console.log(cuisine);
@@ -104,6 +91,8 @@ function displayRestaurantData() {
             console.log(restaurantLng);
 
             console.log(data);
+
+            console.log(menu);
 
         },
         //if you use .then(function(response or data)) you would use .catch(function(xml,text,error)) instead of error.
@@ -119,11 +108,13 @@ function displayRestaurantData() {
 //Randomize restaurant data by looping through api restaurant array to choose restaurant based on matching cuisine selections & zipcode.
 
 $(document).ready(function () {
+
     $("#search").on("click", function () {
-        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng     ;
+        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng;
         R = Math.floor(Math.random() * 20) - 1;
         console.log('search');
         displayRestaurantData();
+
 
     });
 
@@ -134,6 +125,7 @@ $(document).ready(function () {
     })
 
 });
+
 
 
 // Create jquery logic for user onClick Nope! & Bite! commands
