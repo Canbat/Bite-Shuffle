@@ -15,7 +15,6 @@ $(document).ready(function () {
         $("#restaurant-info").modal({
             centered: false
         });
-        $("#menu-info").toggle();
         $("#restaurant-info").parent().css("overflow-y", "scroll");
 
     })
@@ -25,5 +24,5 @@ $(document).ready(function () {
 });
 
 function addMenuUrl(){
-    $("#menu-info").html("<a href=''" + menu + "'> Click here for menu</a>");
+    $("#menu-url").attr("href", menu);
 }

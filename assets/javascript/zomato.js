@@ -78,6 +78,7 @@ function displayRestaurantData() {
             restaurantLng = data.restaurants[R].restaurant.location.longitude;
 
             menu = data.restaurants[R].restaurant.menu_url;
+            addMenuUrl();
 
 
             console.log(restaurant);
@@ -113,6 +114,7 @@ $(document).ready(function () {
         R = Math.floor(Math.random() * 20) - 1;
         console.log('search');
         displayRestaurantData();
+
 
     });
 
