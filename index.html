@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <script src="assets/javascript/modal1.js"></script>
+    <script src="assets/javascript/modal2.js"></script>
+    <script src="assets/javascript/java.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq6fnQw56h8E40TIlzsNFlIpa9Y1RSEuE&callback=initMap">
+    </script>
+    <script src="assets/javascript/map.js"></script>
+    <script src="assets/javascript/zomato.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -14,7 +22,7 @@
 <div class="ui container">
     <div class="ui segment">
         <!-- <h1 class="ui center aligned huge  header" style="font-family:'Muli', sans-serif;"> BITE SHUFFLE </h1> -->
-        <img id="top-img" class="ui centered medium image" src="assets/images/biteshuffle.png" alt="">
+        <img id="top-img" class="ui centered medium image"  src="assets/images/biteshuffle.png" alt="">
     </div>
 </div>
 <br>
@@ -25,8 +33,8 @@
         </div>
         <div class="twelve wide column">
             <div class="ui segment">
-                <h3 class="ui center aligned massive header restaurant-name"></h3>
-                <img id="restaurant-img" class="ui fluid image">
+                <h3  class="ui center aligned massive header restaurant-name"> RESTAURANT NAME</h3>
+                <img id="restaurant-img" class="ui fluid image" src="assets/images/PlaceHolder.jpg">
                 <br>
                 <h2 id="zomato-rating" class="ui small left floated header">Rating: <i class="star icon"></i></h2>
                 <h2 id="price-scale" class="ui small right floated header"><i class="money icon"></i>:Price</h2>
@@ -34,7 +42,7 @@
             </div>
         </div>
         <div class="two wide column">
-            <button id="bite" class="circular positive ui right floated button">BITE!</button>
+            <button id="bite"  class="circular positive ui right floated button">BITE!</button>
         </div>
     </div>
 
@@ -48,12 +56,25 @@
         </div>
     </div>
     <div class="ui container">
+        <form>
         <div class="ui center aligned segment">
-            <div class="ui search">
-                <div class="ui icon input">
-                    <input id="zipcode" class="prompt" type="text" placeholder="zipcode">
-                    <i class="search icon"></i>
+            <div class="ui search" >
+                <div id='frame'>
+                    <div class='search'>
+                        <form method='post'>
+                            <input type='text' name='searchQuery' id='zipcode' />
+                            <!--<input type='submit' name='submit' id='submitBtn' class='zipcode' disabled='disabled' />-->
+                        </form>
+                    </div>
                 </div>
+                <!--<div class="ui icon input">-->
+
+                    <!--<input id="zipcode" class="prompt" type="text" placeholder="zipcode" >-->
+                    <!--<input type='text' name='searchQuery' id='search' />-->
+                    <!--<input type='submit' name='submit' id='submitBtn' class='search' disabled='disabled' />-->
+
+                    <!--&lt;!&ndash;<i class="search icon"></i>&ndash;&gt;-->
+                <!--</div>-->
 
                 <div class="results"></div>
             </div>
@@ -82,6 +103,7 @@
     <br>
     <div class="ui center aligned container">
         <div class="actions">
+            <!--<button id="nope"class="circular negative ui button">RANDOM</button>-->
             <button id="search" class="ui approve button circular postive">SEARCH</button>
         </div>
     </div>
@@ -104,46 +126,35 @@
     <br/>
     <div class="ui container">
         <div id="menu" class="ui segment">
-            <div id="menu-info" class="ui center aligned header">
+            <div id="menu-info" class="ui sement center aligned header">
                 <a href="" id="menu-url" target="_blank">Menu</a>
             </div>
         </div>
     </div>
     <br/>
     <div class="ui container">
+        <div id="delivery" class="ui segment">
+            <h4 class="ui center aligned header">delivery</h4>
+
+        </div>
+    </div>
+    <br/>
+    <div class="ui container">
         <div id="reviews" class="ui segment">
             <h4 class="ui center aligned header">reviews</h4>
-            <div>
-                <table class="ui very basic table">
-                    <thead>
-                        <td>Rating</td>
-                        <td>comment</td>
-                    </thead>
-                    <tbody id="review-table">
-
-                    </tbody>
-                </table>
-            </div>
         </div>
     </div>
     <br/>
     <div class="ui container">
         <div id="search-again" class="ui segment">
             <div class="actions">
-                <button id="search-again" class="ui button">Search Again</button>
+                <button class="ui fluid button">Search Again</button>
             </div>
         </div>
     </div>
 </div>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq6fnQw56h8E40TIlzsNFlIpa9Y1RSEuE&callback=initMap">
-</script>
-<script src="assets/javascript/zomato.js"></script>
-<script src="assets/javascript/map.js"></script>
-
-<script src="assets/javascript/modal1.js"></script>
-<script src="assets/javascript/modal2.js"></script>
 <script src="assets/javascript/java.js"></script>
+<script src="assets/javascript/zip.js"></script>
 </body>
 
 </html>
