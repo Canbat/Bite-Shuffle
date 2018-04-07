@@ -127,7 +127,12 @@ $(document).ready(function () {
 
     });
 
-
+    $('#nope').on("click", function () {
+        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng;
+        R = Math.floor(Math.random() * 20) - 1;
+        console.log('nope');
+        displayRestaurantData();
+    });
 
 
 
