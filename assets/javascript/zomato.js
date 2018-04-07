@@ -3,7 +3,7 @@ var lng;
 var restaurantLat;
 var restaurantLng;
 var menu;
-
+var resID;
 var userKey = "74947a847a6bedf2fed11165ada8f8b4";
 
 // var apiUrl = "https://developers.zomato.com/api/v2.1/cuisines?city_id=35&lat=33.7490&lon=84.3880";
@@ -42,6 +42,7 @@ console.log(R);
 //Creating an AJAX call to randomly generate the Restaurant Name & Restarant Image.
 
 function displayRestaurantData() {
+    reviewUrl = "https://developers.zomato.com/api/v2.1/reviews?res_id=" + resID;
 
     $.ajax({
         url: apiUrl,
@@ -76,11 +77,20 @@ function displayRestaurantData() {
             }
             restaurantLat = data.restaurants[R].restaurant.location.latitude;
             restaurantLng = data.restaurants[R].restaurant.location.longitude;
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: restaurantLat, lng: restaurantLng},
+                zoom: 8
+            });
 
+            resID = data.restaurants[R].restaurant.R.res_id;
+            reviewUrl = "https://developers.zomato.com/api/v2.1/reviews?res_id=" + resID;
             menu = data.restaurants[R].restaurant.menu_url;
             addMenuUrl();
+            addReviews();
 
 
+
+            console.log(data.restaurants[R].restaurant.R.res_id);
             console.log(restaurant);
             console.log(cuisine);
             console.log("Bite-Rating " + rating);
@@ -109,20 +119,29 @@ function displayRestaurantData() {
 
 $(document).ready(function () {
 
+
     $("#search").on("click", function () {
         apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng;
         R = Math.floor(Math.random() * 20) - 1;
         console.log('search');
         displayRestaurantData();
+        initMap();
+
 
 
     });
 
     $('#nope').on("click", function () {
+        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng;
         R = Math.floor(Math.random() * 20) - 1;
         console.log('nope');
         displayRestaurantData();
+        initMap();
+
+
     })
+
+
 
 });
 

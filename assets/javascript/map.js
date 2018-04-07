@@ -1,4 +1,4 @@
-
+var uluru
 
 $("#menu-info").hide();
 
@@ -9,7 +9,7 @@ $("#menu").on("click", function () {
 
 
 function initMap() {
-    var uluru = {lat: restaurantLat, lng: restaurantLng};
+    uluru = {lat: 33.8406338000, lng: -84.3694841000};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
         center: uluru
