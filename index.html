@@ -12,29 +12,27 @@
 <body>
 <!-- Make sure all of the IDs on elements match -->
 <div class="ui container">
-    <div class="ui segment">
         <!-- <h1 class="ui center aligned huge  header" style="font-family:'Muli', sans-serif;"> BITE SHUFFLE </h1> -->
-        <img id="top-img" class="ui centered medium image" src="assets/images/biteshuffle.png" alt="">
-    </div>
+        <img id="top-img" class="ui centered medium image" src="assets/images/biteshuffle1.png" alt="">
 </div>
 <br>
 <div class="ui container">
     <div class="ui three column middle aligned grid">
         <div class="two wide column">
-            <button id="nope" class="circular negative ui left floated button">NOPE!</button>
+            <button id="nope" class="circular negative ui left floated button">NOPE</button>
         </div>
         <div class="twelve wide column">
-            <div class="ui segment">
-                <h3 class="ui center aligned massive header restaurant-name"></h3>
-                <img id="restaurant-img" class="ui fluid image">
+            <div id="bite-display"class="ui segment">
+                <h3 id="restaurant-name" class="ui center aligned massive header restaurant-name"></h3>
+                <img id="restaurant-img" class="ui fluid rounded image">
                 <br>
-                <h2 id="zomato-rating" class="ui small left floated header">Rating: <i class="star icon"></i></h2>
+                <h2 id="zomato-rating" class="ui small left floated header"></h2>
                 <h2 id="price-scale" class="ui small right floated header"><i class="money icon"></i>:Price</h2>
                 <br>
             </div>
         </div>
         <div class="two wide column">
-            <button id="bite" class="circular positive ui right floated button">BITE!</button>
+            <button id="bite" class="circular positive ui right floated button">BITE</button>
         </div>
     </div>
 
