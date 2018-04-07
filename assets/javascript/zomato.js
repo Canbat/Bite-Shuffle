@@ -75,22 +75,18 @@ function displayRestaurantData() {
             else {
                 $('#restaurant-img').attr('src', photo);
             }
-            restaurantLat = data.restaurants[R].restaurant.location.latitude;
-            restaurantLng = data.restaurants[R].restaurant.location.longitude;
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: restaurantLat, lng: restaurantLng},
-                zoom: 8
-            });
-
+            restaurantLat = parseFloat(data.restaurants[R].restaurant.location.latitude);
+            restaurantLng = parseFloat(data.restaurants[R].restaurant.location.longitude);
             resID = data.restaurants[R].restaurant.R.res_id;
             reviewUrl = "https://developers.zomato.com/api/v2.1/reviews?res_id=" + resID;
             menu = data.restaurants[R].restaurant.menu_url;
             addMenuUrl();
             addReviews();
+            initMap();
 
 
 
-            console.log(data.restaurants[R].restaurant.R.res_id);
+            console.log(parseFloat(data.restaurants[R].restaurant.R.res_id));
             console.log(restaurant);
             console.log(cuisine);
             console.log("Bite-Rating " + rating);
@@ -125,21 +121,14 @@ $(document).ready(function () {
         R = Math.floor(Math.random() * 20) - 1;
         console.log('search');
         displayRestaurantData();
-        initMap();
+
 
 
 
     });
 
-    $('#nope').on("click", function () {
-        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng;
-        R = Math.floor(Math.random() * 20) - 1;
-        console.log('nope');
-        displayRestaurantData();
-        initMap();
 
 
-    })
 
 
 

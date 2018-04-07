@@ -57,3 +57,15 @@ function addReviews() {
 
 }
 
+$('#search-again').on("click", function () {
+    $('#restaurant-info')
+        .modal('hide')
+    ;
+
+    apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng;
+    R = Math.floor(Math.random() * 20) - 1;
+    console.log('nope');
+    displayRestaurantData();
+});
+
+
