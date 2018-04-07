@@ -117,25 +117,18 @@ $(document).ready(function () {
 
 
     $("#search").on("click", function () {
-        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng;
+        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng + "&cuisines=" + textboxValue;
         R = Math.floor(Math.random() * 20) - 1;
         console.log('search');
         displayRestaurantData();
-
-
-
-
     });
 
     $('#nope').on("click", function () {
-        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng;
+        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng + "&cuisines=" + textboxValue;
         R = Math.floor(Math.random() * 20) - 1;
         console.log('nope');
         displayRestaurantData();
     });
-
-
-
 
 });
 
