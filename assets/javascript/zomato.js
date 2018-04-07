@@ -42,7 +42,7 @@ console.log(R);
 //Creating an AJAX call to randomly generate the Restaurant Name & Restarant Image.
 
 function displayRestaurantData() {
-    reviewUrl = "https://developers.zomato.com/api/v2.1/reviews?res_id=" + resID;
+
 
     $.ajax({
         url: apiUrl,
@@ -117,14 +117,14 @@ $(document).ready(function () {
 
 
     $("#search").on("click", function () {
-        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng + "&cuisines=" + textboxValue;
+        apiUrl = "https://developers.zomato.com/api/v2.1/search?count=50&lat=" + lat + "&lon=" + lng + "&cuisines=" + textboxValue;
         R = Math.floor(Math.random() * 20) - 1;
         console.log('search');
         displayRestaurantData();
     });
 
     $('#nope').on("click", function () {
-        apiUrl = "https://developers.zomato.com/api/v2.1/search?lat=" + lat + "&lon=" + lng + "&cuisines=" + textboxValue;
+        apiUrl = "https://developers.zomato.com/api/v2.1/search?count=50&lat=" + lat + "&lon=" + lng + "&cuisines=" + textboxValue;
         R = Math.floor(Math.random() * 20) - 1;
         console.log('nope');
         displayRestaurantData();
