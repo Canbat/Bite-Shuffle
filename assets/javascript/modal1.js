@@ -2,6 +2,7 @@ $(document).ready(function () {
     $('#landing-modal')
         .modal('setting', 'closable', false)
         .modal('show');
+    $(".dimmer").css("background-color","rgba(255,69,0)");
 
     $.ajax({
         url: "https://ipapi.co/json/",
