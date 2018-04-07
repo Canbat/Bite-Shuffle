@@ -130,6 +130,10 @@ $(document).ready(function () {
         displayRestaurantData();
     });
 
+    $('#reload').click(function() {
+        location.reload();
+    });
+
 });
 
 
